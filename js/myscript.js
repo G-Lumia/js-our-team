@@ -53,4 +53,31 @@ const team = [
 ];
 
 
+const cards = document.getElementById("cards");
+
+for(let i=0; i<team.length; i++)
+{
+    const card = document.createElement("div");
+    card.classList.add("card");
+    card.classList.add("col-3");
+    const img = document.createElement("img");
+    img.classList.add("img-fluid");
+    img.src = "./img/" + team[i].image;
+
+    const cardContent = document.createElement("div");
+    cardContent.classList.add("card-content");
+
+    const name = document.createElement("h2");
+    name.textContent = team[i].name;
+
+    const role = document.createElement("p");
+    role.textContent = team[i].role;
+
+    card.appendChild(img);
+    cardContent.appendChild(name);
+    cardContent.appendChild(role);
+
+    card.appendChild(cardContent);
+    cards.appendChild(card);
+}
 
