@@ -19,6 +19,9 @@ Organizzare i singoli membri in card/schede */
 // Scott    Estrada	Developer	              scott-estrada-developer.jpg
 // Barbara  Ramos	    Graphic Designer	      barbara-ramos-graphic-designer.jpg
 
+
+// viene creato l'array di oggetti
+
 const team = [
     {
         name: "Wayne Barnett",
@@ -52,8 +55,11 @@ const team = [
     }
 ];
 
-
+// viene puntato l'elemento in html responsabile di contenere le carte
 const cards = document.getElementById("cards");
+
+
+// vengono create le varie card dei membri del team, ciclando l'array team
 
 for(let i=0; i<team.length; i++)
 {
